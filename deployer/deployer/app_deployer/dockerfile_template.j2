@@ -1,0 +1,7 @@
+FROM tensorflow/tensorflow
+RUN apt-get update && apt-get install ffmpeg libsm6 libxext6 -y --no-install-recommends
+ADD {{ contract.root_dir }} {{ contract.root_dir }}
+COPY requirements.txt .
+RUN pip install -r requirements.txt 
+EXPOSE {{ contract.port }}
+CMD {{contract.cmd}}

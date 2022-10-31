@@ -1,0 +1,13 @@
+{% if contract.tensorflow_support == "yes" %}
+FROM tensorflow/tensorflow
+RUN apt-get update && apt-get install ffmpeg libsm6 libxext6 -y --no-install-recommends
+{% else %}
+FROM python:3
+{% endif %}
+ADD {{ contract.root_dir }} {{ contract.root_dir }}
+ADD server.py .
+COPY requirements.txt .
+RUN pip install -r requirements.txt 
+RUN pip install flask
+EXPOSE 80
+CMD [ "python3","server.py" ]

@@ -1,0 +1,140 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "secret_key": {
+      "type": "string"
+    },
+    "root_dir": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "cmd": {
+      "type": "string"
+    },
+    "port": {
+      "type": "integer"
+    },
+    "sensor_interface": {
+      "type": "string"
+    },
+    "model_interface": {
+      "type": "string"
+    },
+    "controller_interface": {
+      "type": "string"
+    },
+    "sensors": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "function": {
+              "type": "string"
+            },
+            "sensor_type": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "function",
+            "sensor_type"
+          ]
+        }
+      ]
+    },
+    "controllers": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "function": {
+              "type": "string"
+            },
+            "args": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "type"
+                  ]
+                }
+              ]
+            },
+            "controller_type": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "function",
+            "args",
+            "controller_type"
+          ]
+        }
+      ]
+    },
+    "models": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "health_check": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "timeout": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "url",
+        "method",
+        "timeout"
+      ]
+    },
+    "requirements": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "version",
+    "secret_key",
+    "root_dir",
+    "name",
+    "cmd",
+    "port",
+    "sensor_interface",
+    "model_interface",
+    "controller_interface",
+    "sensors",
+    "controllers",
+    "models",
+    "health_check",
+    "requirements"
+  ]
+}

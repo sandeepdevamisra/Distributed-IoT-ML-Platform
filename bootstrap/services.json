@@ -1,0 +1,72 @@
+{   
+    "username": "yesasi4953",
+    "password": "Hackathon@2022",
+    "version": "1.0.0",
+    "services" : [
+        {
+            "name": "deployer",
+            "path": "../deployer",
+            "version": "1.0.0"
+        },
+        {
+            "name": "deployer_master",
+            "path": "../deployer_master",
+            "version": "1.0.0"
+        },
+        {
+            "name": "platform_manager",
+            "path": "../platform_manager",
+            "version": "1.0.0"
+        },
+        {
+            "name":"scheduler",
+            "path": "../scheduler",
+            "version": "1.0.0"
+        },
+        {
+            "name":"sensor_manager",
+            "path": "../sensor_manager",
+            "version": "1.0.0"
+        },
+        {
+            "name":"sensor_request_handler",
+            "path": "../sensor_request_handler",
+            "version": "1.0.0"
+        },
+        {
+            "name":"model_request_handler",
+            "path": "../model_request_handler",
+            "version": "1.0.0"
+        },
+        {
+            "name":"monitor_ha",
+            "path": "../monitor_ha",
+            "version": "1.0.0"
+        },
+        {
+            "name":"system_monitor",
+            "path": "../system_monitor",
+            "version": "1.0.0"
+        },
+        {
+            "name":"load_balancer",
+            "path": "../load_balancer",
+            "version": "1.0.0"
+        },
+        {
+            "name":"monitor_logger",
+            "path": "../monitor_logger",
+            "version": "1.0.0"
+        },
+        {
+            "name":"monitor_log_aggregator",
+            "path": "../monitor_log_aggregator",
+            "version": "1.0.0"
+        },
+        {
+            "name":"auth",
+            "path": "../auth",
+            "version": "1.0.0"
+        }
+    ]
+}

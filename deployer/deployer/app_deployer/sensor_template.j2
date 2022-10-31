@@ -1,0 +1,8 @@
+import requests
+import json
+{% for sensor in sensors %}
+def {{sensor.function}}():
+    url = "{{sensor_api}}/data/{{sensor.sensor_id}}"
+    response = requests.get(url)
+    return response.content
+{% endfor %}
